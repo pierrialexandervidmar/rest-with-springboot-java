@@ -1,7 +1,6 @@
 package br.com.erudio.services;
 
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
 import java.util.logging.Logger;
 
@@ -47,10 +46,10 @@ public class PersonServices {
 		return repository.save(entity);
 	}
 
-	public Person delete(Long id) {
+	public void delete(Long id) {
 		logger.info("Delete one person!");
 		var entity = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No Records found for this ID"));
 
-		return repository.delete(entity);
+		repository.delete(entity);
 	}
 }

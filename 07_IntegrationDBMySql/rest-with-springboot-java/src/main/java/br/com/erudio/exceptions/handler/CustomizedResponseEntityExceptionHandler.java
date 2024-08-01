@@ -12,7 +12,6 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import br.com.erudio.exceptions.ExceptionResponse;
-import br.com.erudio.exceptions.UnsupportedMathOperationException;
 
 @ControllerAdvice
 @RestController
